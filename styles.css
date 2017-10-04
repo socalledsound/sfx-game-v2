@@ -1,0 +1,22 @@
+html {
+	background-color: rgb(51,52,58);
+	/*background-color: green;*/
+	color: white;
+	font-family: 'Inconsolata', monospace;
+}
+
+
+canvas {  width: 100%;
+  height: auto;
+  background-color: pink;
+  z-index: 0;
+
+
+	
+
+}
+
+
+.text{
+	font-size: 30px;
+}
