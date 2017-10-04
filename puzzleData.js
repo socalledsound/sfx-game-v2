@@ -86,11 +86,11 @@ const puzzleData = {
 		solutionKey:"E",
 		alreadySolved: false,
 		clips: [
-			{E1:"sounds/wobbly-short/wobb-sh-1.mp3"},
-			{E2:"sounds/wobbly-short/wobb-sh-2.mp3"},
-			{E3:"sounds/wobbly-short/wobb-sh-3.mp3"},
-			{E4:"sounds/wobbly-short/wobb-sh-4.mp3"},
-			{E5:"sounds/wobbly-short/wobb-sh-5.mp3"},
+			{E1:"sounds/wobbly-shorter/wobb-sh-1.mp3"},
+			{E2:"sounds/wobbly-shorter/wobb-sh-2.mp3"},
+			{E3:"sounds/wobbly-shorter/wobb-sh-3.mp3"},
+			{E4:"sounds/wobbly-shorter/wobb-sh-4.mp3"},
+			{E5:"sounds/wobbly-shorter/wobb-sh-5.mp3"},
 		]
 	}
 
