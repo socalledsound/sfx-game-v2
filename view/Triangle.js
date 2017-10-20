@@ -5,8 +5,8 @@ var Triangle = function(a,b,c,d,e,f,type) {
 			this.d = d;
 			this.e = e;
 			this.f = f;
-			this.fillColor=gameOptions.interfaceColor;
-			this.strokeColor = gameOptions.interfaceStrokeColor;
+			this.fillColor=gameOptions.triangleColor;
+			this.strokeColor = gameOptions.triangleStrokeColor;
 			this.type = type;
 
 	this.display = function() {

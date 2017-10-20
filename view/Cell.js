@@ -49,7 +49,7 @@ var Cell = function(x, y,hiddenColor,sound, cellRow) {
 
 		fill(this.cellBorderColor);
 		rect(this.x-5,this.y,this.width,this.height,10);
-		strokeWeight(5);
+		strokeWeight(3);
 		stroke(this.cellRingColor)
 		rect(this.x,this.y+5,this.width-10,this.height-10,10);
 		fill(this.cellColor);		
@@ -104,7 +104,7 @@ var Cell = function(x, y,hiddenColor,sound, cellRow) {
 	this.markSolved = function() {
 		this.solved = true;
 		this.glowing = false;
-		this.cellBorderColor = this.solvedColor;
+		// this.cellBorderColor = this.solvedColor;
 		this.cellColor = this.solvedColor;
 	},
 
@@ -125,7 +125,8 @@ var Cell = function(x, y,hiddenColor,sound, cellRow) {
 	},
 
 	this.resetCellMeridian = function() {
-		if(!this.onMeridian && !this.playing) {
+		if(!this.solved && !this.onMeridian && !this.playing) {
+			this.cellBorderColor = this.cellBorderStartColor;
 			this.cellColor = this.cellStartColor;
 		}
 	},

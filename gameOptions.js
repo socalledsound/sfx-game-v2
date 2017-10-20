@@ -6,8 +6,8 @@ var gameOptions = {
 	
 	cellRingColor: [43, 21, 32],
 	cellBorderColor: [160, 144, 150],
-	cellBorderHighlightColor: [108, 240, 247],
-	cellStartColor: [255,255,255],
+	cellBorderHighlightColor: [108, 240, 255],
+	cellStartColor: [242, 227, 196],
 	cellMeridianColor:[10,10,80],
 	cellHiddenColors:[[6, 62, 229],[196, 17, 44],[229, 99, 6],[200,20,200],[11, 221, 25]],
 	cellHighlightColor: [23,225,239],
@@ -18,8 +18,8 @@ var gameOptions = {
 	
 	// interface color palette
 
-	interfaceColor: [150,20,20],
-	interfaceStrokeColor: [140,90,90],
+	triangleColor: [252, 248, 0],
+	triangleStrokeColor: [140,90,90],
 	vertColor: [200,200,200,80],
 	playHeadColor: [239,228,60,100],
 	

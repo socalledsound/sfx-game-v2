@@ -96,7 +96,6 @@ var Container = function(x,y,sounds) {
 
 	this.checkMeridian = function() {
 		this.cells.forEach(function(cell,index){
-			if(!cell.solved) {
 					if((cell.y > (gameOptions.meridian-50)) && (cell.y < (gameOptions.meridian+40))) {
 						cell.markAsMeridian();
 						this.meridianKey = cell.key;
@@ -104,7 +103,7 @@ var Container = function(x,y,sounds) {
 					else {
 						cell.markUnMeridian();
 					}
-				}			 
+						 
 		}, this)	
 		return this.meridianKey
 		

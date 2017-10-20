@@ -1,6 +1,20 @@
 var gameView;
 var gameOptions;
 
+
+document.addEventListener('touchstart', this.touchstart);
+document.addEventListener('touchmove', this.touchmove);
+
+function touchstart(e) {
+    e.preventDefault()
+}
+
+function touchmove(e) {
+    e.preventDefault()
+}
+
+
+
 function setup() {
 
 	createCanvas(windowWidth,windowHeight);
