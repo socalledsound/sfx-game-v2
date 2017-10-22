@@ -161,7 +161,7 @@ var Game = function() {
 
 		// this.magicSolvedSound.play();
 		this.drawGlowing();
-		setTimeout(this.solvedAnimationGrey.bind(this),2000);	
+		setTimeout(this.solvedAnimationGrey.bind(this),1500);	
 	},
 
 	this.solvedAnimationGrey = function() {
@@ -169,7 +169,7 @@ var Game = function() {
 			container.markSolved(this.currentKey);		
 		}, this)
 		 this.drawSolved();
-		setTimeout(this.showText.bind(this),2000);
+		setTimeout(this.showText.bind(this),1000);
 	}	
 
 	this.drawGlowing = function() {
@@ -181,7 +181,7 @@ var Game = function() {
 
 	this.drawSolved = function() {
 		background(this.background_color);
-		
+		this.fullSolvedSound.play();
 		this.containers.forEach(function(container,index){
 				container.onlyShowSolvedCells();
 						
@@ -191,7 +191,7 @@ var Game = function() {
 	this.showText = function() {
 
 		// var quizText = document.getElementById("quiz-modal")
-		modal.style.display = "flex";
+		modal.style.display = "block";
 	},
 
 	// this.showText = function () {		

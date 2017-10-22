@@ -158,12 +158,12 @@ var Container = function(x,y,sounds,index) {
 	},	
 
 	this.settleInGrid = function(val) {
-		if (val < 30) {val = 30};
-		if(val > 30 && val < 120 )  {val = 30};
-		if(val > 110 && val <200 ) 	{val = 115};
+		if (val < 30) {val = 36};
+		if(val > 30 && val < 120 )  {val = 36};
+		if(val > 110 && val <200 ) 	{val = 118};
 		if(val > 200 && val <280 ) 	{val = 200};			
-		if(val > 280 && val <360 ) 	{val = 285};
-		if(val > 350 ) 	{val = 370};
+		if(val > 280 && val <360 ) 	{val = 282};
+		if(val > 350 ) 	{val = 365};
 		return val	
 	},
 

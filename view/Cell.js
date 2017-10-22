@@ -169,12 +169,12 @@ var Cell = function(x, y,hiddenColor,sound, cellRow,spacer) {
 
 	this.displayGlowing = function() {
 
-		this.visible === true ? strokeWeight(0.5) : strokeWeight(0.0);	
+		this.visible === true ? strokeWeight(0.1) : strokeWeight(0.0);	
 		 stroke(this.cellBorderColor);
-		 strokeWeight(20);
+		 strokeWeight(1);
 		 fill(this.cellBorderColor);
 		rect(this.x-5,this.y,this.width,this.height,10);
-		strokeWeight(3);
+		strokeWeight(1);
 		stroke(this.cellRingColor)
 		rect(this.x,this.y+5,this.width-10,this.height-10,10);
 		fill(this.cellColor);		
