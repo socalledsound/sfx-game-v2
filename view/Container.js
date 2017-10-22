@@ -1,4 +1,4 @@
-var Container = function(x,y,sounds) {
+var Container = function(x,y,sounds,index) {
 	this._x = x;
 	this._y = y;
 	this.currentX = x;
@@ -6,9 +6,12 @@ var Container = function(x,y,sounds) {
 	this.containerWidth = gameOptions.containerWidth;
 	this.containerHeight = gameOptions.containerHeight;
 	this.triangleHeight = 60;
-	this.spacer = gameOptions.spacer;
+	this.spacerX = gameOptions.spacerX;
+	this.spacerY = gameOptions.spacerY;
 	this.numCells = gameOptions.numCells;
-	this.currentColumn = 0;
+	this.containerNumber = index;
+	this.containerBorderColor = gameOptions.containerBorderColor;
+	this.containerStrokeWidth = gameOptions.containerStrokeWidth;
 	this.sounds = sounds;
 	this.meridianKey = "Z";
 	this.containerSolved = false;
@@ -17,8 +20,8 @@ var Container = function(x,y,sounds) {
 
 	this.init = function () {
 		
-			this.initUpperTriangle(this._x,this._y);
-			this.initLowerTriangle(this._x,this._y);
+			this.initUpperTriangle(this._x+this.spacerX,this._y);
+			this.initLowerTriangle(this._x+this.spacerX,this._y);
 			this.initCells();
 	}
 
@@ -29,8 +32,8 @@ var Container = function(x,y,sounds) {
 			var scrambledOrder = initialKeys.sort(function(){return Math.random() * 2 -1;});
 	
 			for ( var i=0; i < this.numCells; i++) {
-				var x = this._x + (this.containerWidth/20);
-				var y = this._y + ((this.containerHeight/this.numCells)*i) + (this.spacer*i);
+				var x = this._x + (this.containerWidth/20)+(this.spacerX);
+				var y = this._y + ((this.containerHeight/this.numCells)*i) + (this.spacerY*i);
 				var hiddenColor = gameOptions.cellHiddenColors[scrambledOrder[i]];
 				var cellSound = this.sounds[scrambledOrder[i]];
 				var cellRow = i;
@@ -63,11 +66,13 @@ var Container = function(x,y,sounds) {
 	
 
 	this.display = function () {
+
 			this.upperTriangle.display();
 			this.lowerTriangle.display();
 			this.cells.forEach(function(cell,index){
 				cell.displayCell();
 			});	
+
 
 	},
 
@@ -205,13 +210,17 @@ var Container = function(x,y,sounds) {
 			},this);	
 	},
 
+
+
 	this.onlyShowGlowingCells = function() {
-			this.cells.forEach(function(cell,index){				
+			this.cells.forEach(function(cell){
+			console.log(this.containerNumber);				
 				if (cell.glowing) {
-					setTimeout(cell.showSolvedGlowing.bind(cell),1000*index);
+					setTimeout(cell.showSolvedGlowing.bind(cell),300*this.containerNumber);
+					//cell.showSolvedGlowing();
 				}
 				
-			}) 		
+			}.bind(this)) 		
 	},
 
 	this.onlyShowSolvedCells = function() {
@@ -223,6 +232,6 @@ var Container = function(x,y,sounds) {
 			}) 		
 	}				
 	
-
+// this.onlyShowGlowingCells =this.onlyShowGlowingCells.bind(this);
 
 }

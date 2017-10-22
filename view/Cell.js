@@ -1,4 +1,4 @@
-var Cell = function(x, y,hiddenColor,sound, cellRow) {
+var Cell = function(x, y,hiddenColor,sound, cellRow,spacer) {
 	this.x 			= 	x;
 	this.y 			= 	y;
 	this.row 		= cellRow;
@@ -12,7 +12,7 @@ var Cell = function(x, y,hiddenColor,sound, cellRow) {
 	this.height 	= 	gameOptions.containerHeight/gameOptions.numCells;
 	this.reset_height = gameOptions.containerHeight/gameOptions.numCells;
 	this.reset_width =	gameOptions.containerWidth;
-	this.spacer  	= gameOptions.spacer; 
+	this.spacerY  	= gameOptions.spacerY; 
 	this.cellStartColor = gameOptions.cellStartColor;
 	this.cellColor = gameOptions.cellStartColor;
 	this.cellBorderColor = gameOptions.cellBorderColor;
@@ -68,7 +68,7 @@ var Cell = function(x, y,hiddenColor,sound, cellRow) {
 	this.move = function(containerY) {
 		var distanceMoved = containerY-this.y;	
 		// console.log(distanceMoved);
-		this.y = containerY + (this.height * this.row) + (this.spacer * this.row);
+		this.y = containerY + (this.height * this.row)+(this.spacerY*this.row);
 		// this.moving = true;
 	},
 
@@ -163,7 +163,43 @@ var Cell = function(x, y,hiddenColor,sound, cellRow) {
 	},
 
 	this.showSolvedGlowing =function() {
+		this.sound.play();
+		this.displayGlowing();	
+	},
 
+	this.displayGlowing = function() {
+
+		this.visible === true ? strokeWeight(0.5) : strokeWeight(0.0);	
+		 stroke(this.cellBorderColor);
+		 strokeWeight(20);
+		 fill(this.cellBorderColor);
+		rect(this.x-5,this.y,this.width,this.height,10);
+		strokeWeight(3);
+		stroke(this.cellRingColor)
+		rect(this.x,this.y+5,this.width-10,this.height-10,10);
+		fill(this.cellColor);		
+		rect(this.x+5,this.y+10,this.width-20,this.height-20,10)
+
+
+			// for(var i=0;i<10;i++) {
+			// 	var color=this.cellColor;
+			// 	var borderColor=this.cellBorderColor;
+			// 	var x = this.x;
+			// 	var y = this.y;
+			// 	var height = this.height;
+			// 	var width = this.width;
+			// 	// scale(1.01);
+			// 	(function(ind) {
+			// 		setTimeout(function() {	
+			
+			// 		fill(borderColor);
+			// 		rect(x,y,width,height+i,10);
+			// 		fill(color);		
+			// 		rect(x+5,y+10,width-20,height-20+i,10);
+
+			// 		}.bind(this),ind*100);	
+			// 	})(i,borderColor,color,x,y,width,height);
+			// }
 	}
 
 }

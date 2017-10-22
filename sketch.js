@@ -2,6 +2,11 @@ var gameView;
 var gameOptions;
 
 
+var modal = document.getElementById('quiz-modal');
+var span = document.getElementsByClassName('close')[0];
+
+
+// disable default touch behavior on touchscreens
 document.addEventListener('touchstart', this.touchstart);
 document.addEventListener('touchmove', this.touchmove);
 
@@ -14,13 +19,11 @@ function touchmove(e) {
 }
 
 
-
+//init game
 function setup() {
-
 	createCanvas(windowWidth,windowHeight);
 	game = new Game();
 	game.initGame();
-
 }
 
 
@@ -33,10 +36,7 @@ function draw () {
 }
 
 
-// so I guess the mouse functions are essentially the controller??
-
 function mousePressed() {
-
  	if(!game.paused) {
  		game.clicked();
  	}
@@ -55,3 +55,15 @@ function mouseReleased() {
 	}
 }
 
+
+
+span.onclick = function() {
+	modal.style.display= "none";
+	game.cleanup();
+}
+
+window.onclick = function() {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+}

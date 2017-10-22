@@ -54,7 +54,7 @@ var Game = function() {
 
 	this.initContainers = function() {
 		for (var i = 0; i < gameOptions.numContainers; i++) {
-			this.containers[i] = new Container(this.xStart+(i*100),this.yStart, this.containerSounds[i]);
+			this.containers[i] = new Container(this.xStart+(i*100)+gameOptions.spacerX*i,this.yStart, this.containerSounds[i],i);
 		}	
 		this.containers.forEach(function(container){
 			container.init();
@@ -69,7 +69,11 @@ var Game = function() {
 
 
 	this.drawGame = function() {		
-		background(this.background_color);
+		background(gameOptions.background_color);
+		stroke(gameOptions.containerBorderColor);
+		strokeWeight(gameOptions.containerStrokeWidth);
+		fill(gameOptions.containerBorderColor)
+		rect(this.xStart+6,this.yStart,535,410,10);
 		if(!this.hideView) {
 			this.containers.forEach(function(container){
 				container.display();
@@ -155,7 +159,7 @@ var Game = function() {
 				container.markGlowing(this.currentKey);			
 			}, this)
 
-		this.magicSolvedSound.play();
+		// this.magicSolvedSound.play();
 		this.drawGlowing();
 		setTimeout(this.solvedAnimationGrey.bind(this),2000);	
 	},
@@ -177,38 +181,45 @@ var Game = function() {
 
 	this.drawSolved = function() {
 		background(this.background_color);
+		
 		this.containers.forEach(function(container,index){
 				container.onlyShowSolvedCells();
 						
 			},this)
 	},
 
-	this.showText = function () {		
- 		background(this.background_color);		 
-		 if(!this.disablePlayback) {
-				this.fullSolvedSound.play();
-				this.disablePlayback = true;
-				};
-		textSize(this.solvedTextSize);
-		textFont(gameOptions.solvedTextFont);
-		strokeWeight(3);
-		textAlign(CENTER);
-		fill(gameOptions.solvedTextColor);
-		this.solvedText = this.solvedText.split(" ");
-		console.log(this.solvedText);
-		for (var i=0; i<this.solvedText.length; i++) {
-			this.solvedTextArray.push(this.solvedText[i]);
-			};
-		this.solvedTextArray.forEach(function(item,index) {
-			text(item,this.solvedText_x,this.solvedText_y+60*index,this.solvedText_width,this.solvedText_height);
-		},this)
+	this.showText = function() {
+
+		// var quizText = document.getElementById("quiz-modal")
+		modal.style.display = "flex";
+	},
+
+	// this.showText = function () {		
+ // 		background(this.background_color);		 
+	// 	 if(!this.disablePlayback) {
+	// 			this.fullSolvedSound.play();
+	// 			this.disablePlayback = true;
+	// 			};
+	// 	textSize(this.solvedTextSize);
+	// 	textFont(gameOptions.solvedTextFont);
+	// 	strokeWeight(3);
+	// 	textAlign(CENTER);
+	// 	fill(gameOptions.solvedTextColor);
+	// 	this.solvedText = this.solvedText.split(" ");
+	// 	console.log(this.solvedText);
+	// 	for (var i=0; i<this.solvedText.length; i++) {
+	// 		this.solvedTextArray.push(this.solvedText[i]);
+	// 		};
+	// 	this.solvedTextArray.forEach(function(item,index) {
+	// 		text(item,this.solvedText_x,this.solvedText_y+60*index,this.solvedText_width,this.solvedText_height);
+	// 	},this)
 			
 		
 
-		setTimeout(this.cleanup,14000);
-		this.fullSolvedSound.fade(1.0,0.0,12000);
+	// 	setTimeout(this.cleanup,14000);
+	// 	this.fullSolvedSound.fade(1.0,0.0,12000);
 
-	},
+	// },
 
 	this.cleanup = function() {
 		this.solvedTextArray=[];

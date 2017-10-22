@@ -30,7 +30,7 @@ const puzzleData = {
 	// },
 			{
 		title: "A LARGE GROUP OF CHILDREN LAUGHING IN A PRETEND COURTROOM",
-		fullSound: "sounds/children-courtroom/crowd-chatter-full.mp3",
+		fullSound: "sounds/courtroom-short/crowd-chatter-full.mp3",
 		solutionKey:"A",
 		alreadySolved: false,
 		clips: [
@@ -43,7 +43,7 @@ const puzzleData = {
 	},
 	{
 		title: "FOREST AMBIENCE, AFTERNOON, MULTIPLE WOODPECKERS JAM, WOODLAND AMBIENCE WITH STREAM AND SMALL BIRDS IN BG",
-		fullSound: "sounds/woodpeckers/woodpeckers-full-use.mp3",
+		fullSound: "sounds/woodpeckers-short/woodpeckers-full-use.mp3",
 		solutionKey:"B",
 		alreadySolved: false,
 		clips: [
@@ -56,7 +56,7 @@ const puzzleData = {
 	},
 	{
 		title: "EERIE AMBIENCE LARGE, SCARY SPACE, SWEEPING TONES, ENERGY WAVE SWELL OR GIANT SPACESHIP BY, SCI FI",
-		fullSound: "sounds/eerieSpace-new/eerieSpace-new-full.mp3",
+		fullSound: "sounds/eerieSpace-short/eerieSpace-new-full.mp3",
 		solutionKey:"C",
 		alreadySolved: false,
 		clips: [
@@ -69,7 +69,7 @@ const puzzleData = {
 	},
 	{
 		title: "GIANT HUMMINGBIRD DARTING AROUND, WINGS BEATING VERY FAST, HOVERING -- VOCAL -- CARTOON",
-		fullSound: "sounds/hummingbird-new/hummingbird-new-full.mp3",
+		fullSound: "sounds/hummingbird-short/hummingbird-new-full.mp3",
 		solutionKey:"D",
 		alreadySolved: false,
 		clips: [
@@ -82,7 +82,7 @@ const puzzleData = {
 	},
 	{
 		title: "ANNOYING HIGH FAIRY VOCALIZATION",
-		fullSound: "sounds/wobbly/wobbly-full.mp3",
+		fullSound: "sounds/wobbly-shorter/wobbly-full.mp3",
 		solutionKey:"E",
 		alreadySolved: false,
 		clips: [

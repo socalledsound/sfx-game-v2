@@ -2,6 +2,10 @@ var gameOptions = {
 	
 	background_color: [60, 3, 66],
 
+
+	containerBorderColor: [40, 3, 46],
+	containerStrokeWidth: 15,
+
 	// cell color palette
 	
 	cellRingColor: [43, 21, 32],
@@ -50,7 +54,8 @@ var gameOptions = {
 	boxHeight:80,
 	containerHeight:400,
 	containerWidth:100,
-	spacer: 5,
+	spacerX: 8,
+	spacerY: 2,
 	playHead_x:10,
 
 	// solution text options
