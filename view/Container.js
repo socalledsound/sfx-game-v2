@@ -13,6 +13,7 @@ var Container = function(x,y,sounds,index) {
 	this.containerBorderColor = gameOptions.containerBorderColor;
 	this.containerStrokeWidth = gameOptions.containerStrokeWidth;
 	this.sounds = sounds;
+	this.colors = gameOptions.cellHiddenColors;
 	this.meridianKey = "Z";
 	this.containerSolved = false;
 	this.cells=[];
@@ -23,18 +24,20 @@ var Container = function(x,y,sounds,index) {
 			this.initUpperTriangle(this._x+this.spacerX,this._y);
 			this.initLowerTriangle(this._x+this.spacerX,this._y);
 			this.initCells();
+			console.log(this.sounds);
 	}
 
 
 	this.initCells = function() {
 		
 			var initialKeys = Object.keys(this.sounds);
+			// console.log(initialKeys);
 			var scrambledOrder = initialKeys.sort(function(){return Math.random() * 2 -1;});
 	
 			for ( var i=0; i < this.numCells; i++) {
 				var x = this._x + (this.containerWidth/20)+(this.spacerX);
 				var y = this._y + ((this.containerHeight/this.numCells)*i) + (this.spacerY*i);
-				var hiddenColor = gameOptions.cellHiddenColors[scrambledOrder[i]];
+				var hiddenColor = this.colors[scrambledOrder[i]];
 				var cellSound = this.sounds[scrambledOrder[i]];
 				var cellRow = i;
 				this.cells[i] = new Cell(x, y, hiddenColor, cellSound, cellRow);			 
@@ -132,7 +135,7 @@ var Container = function(x,y,sounds,index) {
 		this.lowerTriangle.move(this._y, distanceMoved);
 		
 		if (Math.abs(distanceMoved) > 30) {
-			game.moveSound.play();
+			game.moveSound(index);
 		}
 	},
 
@@ -153,7 +156,7 @@ var Container = function(x,y,sounds,index) {
 		this.lowerTriangle.move(this._y, distanceMoved);
 		
 		if (Math.abs(distanceMoved) > 30) {
-			game.moveSound.play();
+			game.moveSound(index);
 		}
 	},	
 

@@ -24,6 +24,7 @@ function setup() {
 	createCanvas(windowWidth,windowHeight);
 	game = new Game();
 	game.initGame();
+	// game.showText(puzzleData.sounds[0].titles);
 }
 
 

@@ -1,6 +1,6 @@
 
 
-const puzzleData = { 
+const puzzleData = {
 	sounds: [
 	// {
 	// 	title: "CANVAS SUITCASE ZIPPER, LONG ZIP OPEN OR CLOSE, SIDE COMPARTMENT, GOOD, SEVERAL TAKES",
@@ -28,23 +28,30 @@ const puzzleData = {
 	// 		{A5:"sounds/monkeys/monkeys5.mp3"}
 	// 	]
 	// },
+
+//cellHiddenColors:[[6, 62, 229],[196, 17, 44],[229, 99, 6],[200,20,200],[11, 221, 25]],
+
 			{
-		title: "A LARGE GROUP OF CHILDREN LAUGHING IN A PRETEND COURTROOM",
-		fullSound: "sounds/courtroom-short/crowd-chatter-full.mp3",
+		trueTitle: "animal - monkey - cartoon - C",
+		titles: ["bullfrogs and other frogs, rowdy ambience","animal - monkey - cartoon - C", "sailors mumbling and grunting", "royal court ambience"],
+		fullSound: "sounds/monkeys/monkeys-full.mp3",
 		solutionKey:"A",
+		color: [66,112,250],
 		alreadySolved: false,
 		clips: [
-			{A1:"sounds/courtroom-short/cc-sh-1.mp3"},
-			{A2:"sounds/courtroom-short/cc-sh-2.mp3"},
-			{A3:"sounds/courtroom-short/cc-sh-3.mp3"},
-			{A4:"sounds/courtroom-short/cc-sh-4.mp3"},
-			{A5:"sounds/courtroom-short/cc-sh-5.mp3"}
+			{A1:"sounds/monkeys/monkeys1.mp3"},
+			{A2:"sounds/monkeys/monkeys2.mp3"},
+			{A3:"sounds/monkeys/monkeys3.mp3"},
+			{A4:"sounds/monkeys/monkeys4.mp3"},
+			{A5:"sounds/monkeys/monkeys5.mp3"}
 		]
 	},
 	{
-		title: "FOREST AMBIENCE, AFTERNOON, MULTIPLE WOODPECKERS JAM, WOODLAND AMBIENCE WITH STREAM AND SMALL BIRDS IN BG",
+		trueTitle: "forest ambience -- multiple woodpeckers jam",
+		titles: ["forest ambience -- multiple woodpeckers jam","wooden box gears with squeaking", "screwing sap bores into forest trees", "door stop in forest giant hut"],
 		fullSound: "sounds/woodpeckers-short/woodpeckers-full-use.mp3",
 		solutionKey:"B",
+		color: [250,47,70],
 		alreadySolved: false,
 		clips: [
 			{B1:"sounds/woodpeckers-short/wp-sh-1.mp3"},
@@ -55,22 +62,26 @@ const puzzleData = {
 		]
 	},
 	{
-		title: "EERIE AMBIENCE LARGE, SCARY SPACE, SWEEPING TONES, ENERGY WAVE SWELL OR GIANT SPACESHIP BY, SCI FI",
-		fullSound: "sounds/eerieSpace-short/eerieSpace-new-full.mp3",
+		trueTitle: "tons of walnuts down drainpipe and into drawer",
+		titles: ["toys popping on a snare drum", "wind rattling a tin can sculpture", "gear ratchets spinning fast", "tons of walnuts down drainpipe and into drawer"],
+		fullSound: "sounds/walnuts/walnuts-full.mp3",
 		solutionKey:"C",
+		color: [250,160,66],
 		alreadySolved: false,
 		clips: [
-			{C1:"sounds/eerieSpace-short/es-sh-1.mp3"},
-			{C2:"sounds/eerieSpace-short/es-sh-2.mp3"},
-			{C3:"sounds/eerieSpace-short/es-sh-3.mp3"},
-			{C4:"sounds/eerieSpace-short/es-sh-4.mp3"},
-			{C5:"sounds/eerieSpace-short/es-sh-5.mp3"},
+			{C1:"sounds/walnuts/walnuts1.mp3"},
+			{C2:"sounds/walnuts/walnuts2.mp3"},
+			{C3:"sounds/walnuts/walnuts3.mp3"},
+			{C4:"sounds/walnuts/walnuts4.mp3"},
+			{C5:"sounds/walnuts/walnuts5.mp3"},
 		]
 	},
 	{
-		title: "GIANT HUMMINGBIRD DARTING AROUND, WINGS BEATING VERY FAST, HOVERING -- VOCAL -- CARTOON",
+		trueTitle: "giant hummingbird darting around - cartoon",
+		titles: ["giant hummingbird darting around - cartoon", "fly stuck in ointment", "comic spaceship element", "mouth motorboat"],
 		fullSound: "sounds/hummingbird-short/hummingbird-new-full.mp3",
 		solutionKey:"D",
+		color: [250,90,250],
 		alreadySolved: false,
 		clips: [
 			{D1:"sounds/hummingbird-short/hb-short-1.mp3"},
@@ -81,9 +92,11 @@ const puzzleData = {
 		]
 	},
 	{
-		title: "ANNOYING HIGH FAIRY VOCALIZATION",
+		trueTitle: "annoying high fairy vocalization",
+		titles: ["comedy vibraslap wooble - cartoon","annoying high fairy vocalization", "coin wobble spin and stop", "saw blade wobble - medium"],
 		fullSound: "sounds/wobbly-shorter/wobbly-full.mp3",
 		solutionKey:"E",
+		color: [50,255,230],
 		alreadySolved: false,
 		clips: [
 			{E1:"sounds/wobbly-shorter/wobb-sh-1.mp3"},
@@ -94,6 +107,26 @@ const puzzleData = {
 		]
 	}
 
+
+
+
+
+
+	// 	{
+	// 	trueTitle: "EERIE AMBIENCE LARGE, SCARY SPACE, SWEEPING TONES, ENERGY WAVE SWELL OR GIANT SPACESHIP BY, SCI FI",
+	// 	titles: ["this is the answe","this is not the answer", "this is also not the answer", "yet again, not the answer"],
+	// 	fullSound: "sounds/eerieSpace-short/eerieSpace-new-full.mp3",
+	// 	solutionKey:"C",
+	// 	color: [250,160,66],
+	// 	alreadySolved: false,
+	// 	clips: [
+	// 		{C1:"sounds/eerieSpace-short/es-sh-1.mp3"},
+	// 		{C2:"sounds/eerieSpace-short/es-sh-2.mp3"},
+	// 		{C3:"sounds/eerieSpace-short/es-sh-3.mp3"},
+	// 		{C4:"sounds/eerieSpace-short/es-sh-4.mp3"},
+	// 		{C5:"sounds/eerieSpace-short/es-sh-5.mp3"},
+	// 	]
+	// },
 	// 	{
 	// 	title: "ANNOYING HIGH FAIRY VOCALIZATION",
 	// 	fullSound: "sounds/highFairy/highFairy-full.mp3",
@@ -107,5 +140,7 @@ const puzzleData = {
 	// 		{E5:"sounds/highFairy/highFairy5.mp3"},
 	// 	]
 	// }
+
+
 
 ]};

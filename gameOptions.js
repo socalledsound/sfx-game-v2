@@ -30,7 +30,16 @@ var gameOptions = {
 	// interface sounds
 
 	mainClickSoundPath:'sounds/interfaceSounds/mainClick.mp3',
+	woodblock1SoundPath:'sounds/interfaceSounds/wood-block-1.mp3',
+	woodblock2SoundPath:'sounds/interfaceSounds/wood-block-2.mp3',
+	woodblock3SoundPath:'sounds/interfaceSounds/wood-block-3.mp3',
+	woodblock4SoundPath:'sounds/interfaceSounds/wood-block-4.mp3',
+	woodblock5SoundPath:'sounds/interfaceSounds/wood-block-5.mp3',
 	magicSolvedSoundPath: 'sounds/interfaceSounds/solvedSoundx3.mp3',
+	rightAnswerSoundPath: 'sounds/interfaceSounds/rightAnswerSound.mp3',
+	wrongAnswerSoundPath: 'sounds/interfaceSounds/wrongAnswerSound.mp3',
+	childrenYaySoundPath: 'sounds/interfaceSounds/childrenYay.mp3',
+	quizAppearSoundPath: 'sounds/interfaceSounds/quizAppearSound.mp3',
 
 
 	// rules options

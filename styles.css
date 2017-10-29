@@ -27,17 +27,17 @@ span {
 	display: none;
 	position: fixed;
 	z-index:1;
-	left: 100;
-	top:300;
-	width:90%;
-	height:70%;
-	margin-top: 100px;
+	left: 50px;
+	top:0px;
+	width:640px;
+	height:850px;
+	margin-top: 0px;
 	/*margin-left:50px;*/
 	border-radius: 10px;
 	overflow:auto;
 	color: rgb(60, 3, 66);
-	opacity: 1;
-	background-color: rgb(220,220,220);
+	opacity: 0.95;
+	background-color: rgb(60, 23, 66);
 	font-weight: bold;
 	font-size: 28px;
 	
@@ -48,6 +48,9 @@ span {
 .wrapper {
 	  display: flex;
 	  flex-direction: column;
+	  margin-top:100px;
+	  top:120px;
+	   opacity: 1.5;
   /*align-items: center;*/
   /*justify-content: center;*/
 }
@@ -59,19 +62,25 @@ span {
 }
 
 
-/* submit button */
+input:focus {
+	outline:none;
+}
+
 .answer-button {
   /*position: fixed;*/
   /*margin: 0 auto;*/
   margin-top: 15px;
-  margin-left:50px;
+  margin-left:40px;
   margin-right:50px;
-  padding: 20px;
+  padding: 30px;
   background: rgb(43, 21, 32);
   color: rgb(160, 144, 150);
-  font-size: 28px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  font-size: 24px;
   cursor: pointer;
   outline: none;
+  border-color: rgb(43, 21, 32);
   border-radius: 10px;
 }
 
