@@ -32,10 +32,13 @@ function setup() {
 
 
 function draw () {
+
+	
   	if(!game.paused) {
   		game.updateGame();
 		game.drawGame();
 	}	
+	ellipse(10,10,100,100);
 }
 
 
