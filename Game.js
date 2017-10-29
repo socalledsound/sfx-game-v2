@@ -231,7 +231,8 @@ var Game = function() {
 
 
 	this.updateButton = function(answer, correctAnswer, index) {
-		var answered = this.checkAnswer(answer, correctAnswer);
+		var answered = false; 
+		answered = this.checkAnswer(answer, correctAnswer);
 
 		
 		if(answered) {
