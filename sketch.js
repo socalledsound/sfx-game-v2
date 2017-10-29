@@ -1,6 +1,6 @@
 var gameView;
 var gameOptions;
-
+var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 var modal = document.getElementById('quiz-modal');
 var span = document.getElementsByClassName('close')[0];
@@ -17,6 +17,8 @@ function touchstart(e) {
 function touchmove(e) {
     e.preventDefault()
 }
+
+
 
 
 //init game

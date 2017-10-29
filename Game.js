@@ -215,7 +215,9 @@ var Game = function() {
 			button.innerHTML = _titles[index];
 			button.style.backgroundColor = "rgb("+ buttonColor[0] + "," + buttonColor[1] + ", " + buttonColor[2] + ")";
 			// button.style.color = "rgb(66, 102, 249)";
-			button.onclick = function() { this.updateButton(_titles[index],correctAnswer,index ); }.bind(this);
+			//document.getElementById('hbs').addEventListener(touchEvent, someFunction);
+			button.addEventListener(touchEvent, function() { this.updateButton(_titles[index],correctAnswer,index ); }.bind(this));
+			// button.onclick = function() { this.updateButton(_titles[index],correctAnswer,index ); }.bind(this);
 	
 		},this);
 
