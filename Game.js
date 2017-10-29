@@ -39,6 +39,7 @@ var Game = function() {
 	this.showRules = true;
 	// this.disableInterface = false;
 	this.paused=false;
+	this.answeredQuiz = false; 
 	this.curIndex=0;
 	 this.moveCounter = 0;
 	this.showRules = true;
@@ -176,7 +177,6 @@ var Game = function() {
 					return sound;
 				};
 			},this)
-		 	console.log(solvedObject.index);
 			if(!solvedObject[0].alreadySolved) {
 				solvedObject[0].alreadySolved = true;
 			this.fullSolvedSound = new Howl({ src: solvedObject[0].fullSound });
@@ -216,6 +216,7 @@ var Game = function() {
 			button.style.backgroundColor = "rgb("+ buttonColor[0] + "," + buttonColor[1] + ", " + buttonColor[2] + ")";
 			// button.style.color = "rgb(66, 102, 249)";
 			//document.getElementById('hbs').addEventListener(touchEvent, someFunction);
+			console.log(index);
 			button.addEventListener(touchEvent, function() { this.updateButton(_titles[index],correctAnswer,index ); }.bind(this));
 			// button.onclick = function() { this.updateButton(_titles[index],correctAnswer,index ); }.bind(this);
 	
@@ -231,11 +232,15 @@ var Game = function() {
 
 
 	this.updateButton = function(answer, correctAnswer, index) {
-		var answered = false; 
-		answered = this.checkAnswer(answer, correctAnswer);
+		this.answeredQuiz = false; 
+		console.log(answer);
+		console.log(correctAnswer);
+		console.log(this.answeredQuiz);
+		this.answeredQuiz = this.checkAnswer(answer, correctAnswer);
 
-		
-		if(answered) {
+		console.log(this.answeredQuiz);
+		if(this.answeredQuiz) {
+			console.log(index);
 			this.buttons.forEach(function(button,i){
 				if(i===index) {
 					button.innerHTML = "correct answer!";
@@ -243,11 +248,13 @@ var Game = function() {
 					this.fullSolvedSound.fade(1.0,0.0,1000);
 					this.rightAnswerSound.play();
 					this.childrenYaySound.play();
+					button.removeEventListener(touchEvent,function() { this.updateButton(answer,correctAnswer,index); }.bind(this));
 					setTimeout(this.cleanup,3000);
 				}
 				else {
 					button.style.backgroundColor = "rgb(60, 23, 66)";
 					button.innerHTML = "";
+					button.removeEventListener(touchEvent,function() { this.updateButton(answer,correctAnswer,index); }.bind(this));
 				}
 			},this);
 
@@ -264,6 +271,9 @@ var Game = function() {
 	this.checkAnswer = function(answer, correctAnswer) {
 		if (answer === correctAnswer) {
 			return true
+		}
+		else {
+			return false
 		};
 	},
 	// this.showText = function () {
@@ -314,6 +324,7 @@ var Game = function() {
 
 	this.cleanup = function() {
 		modal.style.display = "none";
+		this.answeredQuiz = false; 
 		this.solvedTextArray=[];
 		this.paused=false;
 		this.disablePlayback=false;
