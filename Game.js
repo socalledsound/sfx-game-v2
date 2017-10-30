@@ -1,4 +1,4 @@
-// this whole idea of a view component seems superfluous now, should I roll it back in?
+
 // is this list of properties way too long? best way to deal with that?
 var Game = function() {
 	this.mainClickSound = new Howl({ src: gameOptions.mainClickSoundPath, html5: false, volume:0.5});
@@ -44,8 +44,7 @@ var Game = function() {
 	 this.moveCounter = 0;
 	this.showRules = true;
 	this.hideView = false;
-	this.button0,this.button1,this.button2,this.button3;
-	this.buttons;
+
 
 
 	this.initGame = function() {
@@ -191,91 +190,18 @@ var Game = function() {
 			}, this)		
 			// this.drawSolvedAnimation();
 			this.quizAppearSound.play();
-			this.makeQuiz(possTitles, corrTitle, buttonColor);
+            this.paused = true;
+            this.quiz = new Quiz(possTitles, corrTitle, buttonColor);
+            this.fullSolvedSound.play();
+		    modal.style.display = "block";
+//			this.makeQuiz();
 			};
 	},
 
 
 
 
-	this.makeQuiz = function(titles, correctAnswer, buttonColor) {
-		var _titles = titles;
-		// var divColor = soundColor;
-		console.log(buttonColor);
-		this.paused = true;
-
-		this.button0 = document.getElementById("answer0");
-		this.button1 = document.getElementById("answer1");
-		this.button2 = document.getElementById("answer2");
-		this.button3 = document.getElementById("answer3");
-		this.buttons = [this.button0, this.button1, this.button2, this.button3];
-
-
-		this.buttons.forEach((button,index)=>{
-			button.innerHTML = _titles[index];
-			button.style.backgroundColor = "rgb("+ buttonColor[0] + "," + buttonColor[1] + ", " + buttonColor[2] + ")";
-			// button.style.color = "rgb(66, 102, 249)";
-			//document.getElementById('hbs').addEventListener(touchEvent, someFunction);
-			console.log(index);
-			button.addEventListener(touchEvent, function() { this.updateButton(_titles[index],correctAnswer,index ); }.bind(this));
-			// button.onclick = function() { this.updateButton(_titles[index],correctAnswer,index ); }.bind(this);
 	
-		},this);
-
-		this.fullSolvedSound.play();
-		modal.style.display = "block";
-	},
-
-	this.clickedButton = function() {
-		 
-	},
-
-
-	this.updateButton = function(answer, correctAnswer, index) {
-		this.answeredQuiz = false; 
-		console.log(answer);
-		console.log(correctAnswer);
-		console.log(this.answeredQuiz);
-		this.answeredQuiz = this.checkAnswer(answer, correctAnswer);
-
-		console.log(this.answeredQuiz);
-		if(this.answeredQuiz) {
-			console.log(index);
-			this.buttons.forEach(function(button,i){
-				if(i===index) {
-					button.innerHTML = "correct answer!";
-					button.style.backgroundColor = "rgb(60, 23, 66)";
-					this.fullSolvedSound.fade(1.0,0.0,1000);
-					this.rightAnswerSound.play();
-					this.childrenYaySound.play();
-					button.removeEventListener(touchEvent,function() { this.updateButton(answer,correctAnswer,index); }.bind(this));
-					setTimeout(this.cleanup,3000);
-				}
-				else {
-					button.style.backgroundColor = "rgb(60, 23, 66)";
-					button.innerHTML = "";
-					button.removeEventListener(touchEvent,function() { this.updateButton(answer,correctAnswer,index); }.bind(this));
-				}
-			},this);
-
-
-		}
-		else {
-			this.buttons[index].innerHTML = "nope.  guess again!";
-			this.buttons[index].style.backgroundColor = "rgb(60, 23, 66)";
-			this.wrongAnswerSound.play();
-		}
-
-	},
-
-	this.checkAnswer = function(answer, correctAnswer) {
-		if (answer === correctAnswer) {
-			return true
-		}
-		else {
-			return false
-		};
-	},
 	// this.showText = function () {
  // 		background(this.background_color);
 	// 	 if(!this.disablePlayback) {
