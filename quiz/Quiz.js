@@ -25,6 +25,8 @@ var Quiz = function(titles,answer, buttonColor) {
 	        this.buttons[i].innerHTML = this.titles[i];
 	        this.buttons[i].style.backgroundColor = "rgb("+ buttonColor[0] + "," + buttonColor[1] + ", " + buttonColor[2] + ")";
 	        this.buttons[i].addEventListener(touchEvent, this.buttonClicked);
+	        console.log(this.buttons);
+	        console.log(this.titles);
 	    };
     },
 
