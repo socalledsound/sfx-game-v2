@@ -15,9 +15,9 @@ var Quiz = function(titles,answer, buttonColor) {
 
     
     this.init = function() {
-
+   console.log("in here");
     this.quizAppearSound.play();
-    
+ 
 	    for(var i=0;i<this.numButtons; i++) {
 	        // this.buttons[i] = new QuizButton(this.titles[i], this.buttonColor,i);
 	        //  this.buttons[i].init();
