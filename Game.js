@@ -8,11 +8,6 @@ var Game = function() {
 	this.woodblock4Sound = new Howl({src:gameOptions.woodblock4SoundPath, html5: false,volume:0.5});
 	this.woodblock5Sound = new Howl({src:gameOptions.woodblock5SoundPath, html5: false,volume:0.5});
 	this.woodblockSounds = [this.woodblock1Sound, this.woodblock2Sound, this. woodblock3Sound, this.woodblock4Sound, this.woodblock5Sound];
-	this.magicSolvedSound = new Howl({src:gameOptions.magicSolvedSoundPath});
-	this.wrongAnswerSound = new Howl({ src:gameOptions.wrongAnswerSoundPath });
-	this.rightAnswerSound = new Howl({ src: gameOptions.rightAnswerSoundPath });
-	this.childrenYaySound = new Howl({ src: gameOptions.childrenYaySoundPath });
-	this.quizAppearSound = new Howl({ src: gameOptions.quizAppearSoundPath });
 	this.background_color = gameOptions.background_color;
 	this.interfaceColor = gameOptions.interfaceColor;
 	this.interfaceStrokeColor = gameOptions.interfaceStrokeColor;
@@ -26,12 +21,12 @@ var Game = function() {
 	this.solvedArray = [0,0,0,0,0];
 	this.solvedText;
 	this.solvedTextArray=[];
-	this.solvedTextSize=60;
-	// this.solvedTextFont='Arial';
-	this.solvedText_x = gameOptions.solvedText_x;
-	this.solvedText_y = gameOptions.solvedText_y;
-	this.solvedText_width = gameOptions.solvedText_width;
-	this.solvedText_height = gameOptions.solvedText_height;
+	// this.solvedTextSize=60;
+	// // this.solvedTextFont='Arial';
+	// this.solvedText_x = gameOptions.solvedText_x;
+	// this.solvedText_y = gameOptions.solvedText_y;
+	// this.solvedText_width = gameOptions.solvedText_width;
+	// this.solvedText_height = gameOptions.solvedText_height;
 	//this.solved = false;
 	this.antiSolveSpell = false;
 	this.disablePlayback = false;
@@ -189,9 +184,10 @@ var Game = function() {
 				container.markSolved(this.currentKey);
 			}, this)		
 			// this.drawSolvedAnimation();
-			this.quizAppearSound.play();
+			// this.quizAppearSound.play();
             this.paused = true;
             this.quiz = new Quiz(possTitles, corrTitle, buttonColor);
+            this.quiz.init();
             this.fullSolvedSound.play();
 		    modal.style.display = "block";
 //			this.makeQuiz();
