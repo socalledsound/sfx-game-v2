@@ -189,63 +189,13 @@ var Game = function() {
             this.quiz = new Quiz(possTitles, corrTitle, buttonColor);
             this.quiz.init();
             this.fullSolvedSound.play();
-		    modal.style.display = "block";
+		    quizModal.style.display = "block";
 //			this.makeQuiz();
 			};
 	},
 
-
-
-
-	
-	// this.showText = function () {
- // 		background(this.background_color);
-	// 	 if(!this.disablePlayback) {
-	// 			this.fullSolvedSound.play();
-	// 			this.disablePlayback = true;
-	// 			};
-	// 	textSize(this.solvedTextSize);
-	// 	textFont(gameOptions.solvedTextFont);
-	// 	strokeWeight(3);
-	// 	textAlign(CENTER);
-	// 	fill(gameOptions.solvedTextColor);
-	// 	this.solvedText = this.solvedText.split(" ");
-	// 	console.log(this.solvedText);
-	// 	for (var i=0; i<this.solvedText.length; i++) {
-	// 		this.solvedTextArray.push(this.solvedText[i]);
-	// 		};
-	// 	this.solvedTextArray.forEach(function(item,index) {
-	// 		text(item,this.solvedText_x,this.solvedText_y+60*index,this.solvedText_width,this.solvedText_height);
-	// 	},this)
-
-	// this.drawSolvedAnimation = function() {
-	// 	this.paused = true;
-	// 	this.containers.forEach(function(container){
-	// 			container.markGlowing(this.currentKey);
-	// 		}, this)
-
-	// 	// this.magicSolvedSound.play();
-	// 	this.drawGlowing();
-	// 	setTimeout(this.solvedAnimationGrey.bind(this),1500);
-	// },
-
-	// this.solvedAnimationGrey = function() {
-	// 	this.containers.forEach(function(container){
-	// 		container.markSolved(this.currentKey);
-	// 	}, this)
-	// 	 //this.drawSolved();
-	// 	//this.showText();this.showText();	
-	// 	// setTimeout(this.showText.bind(this),1000);
-	// },
-
-
-	// 	setTimeout(this.cleanup,14000);
-	// 	this.fullSolvedSound.fade(1.0,0.0,12000);
-
-	// },
-
 	this.cleanup = function() {
-		modal.style.display = "none";
+		successModal.style.display = "none";
 		this.answeredQuiz = false; 
 		this.solvedTextArray=[];
 		this.paused=false;

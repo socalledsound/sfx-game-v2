@@ -2,7 +2,8 @@ var gameView;
 var gameOptions;
 var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
-var modal = document.getElementById('quiz-modal');
+var quizModal = document.getElementById('quiz-modal');
+var successModal = document.getElementById('success-modal');
 var span = document.getElementsByClassName('close')[0];
 
 
@@ -38,7 +39,7 @@ function draw () {
   		game.updateGame();
 		game.drawGame();
 	}	
-	ellipse(10,10,100,100);
+	// ellipse(10,10,100,100);
 }
 
 
@@ -63,13 +64,13 @@ function mouseReleased() {
 
 
 
-span.onclick = function() {
-	modal.style.display= "none";
-	game.cleanup();
-}
+// span.onclick = function() {
+// 	modal.style.display= "none";
+// 	game.cleanup();
+// }
 
-window.onclick = function() {
-	if (event.target == modal) {
-		modal.style.display = "none";
-	}
-}
+// window.onclick = function() {
+// 	if (event.target == modal) {
+// 		modal.style.display = "none";
+// 	}
+// }

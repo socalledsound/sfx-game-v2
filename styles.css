@@ -2,7 +2,8 @@ html {
 	background-color: rgb(51,52,58);
 	/*background-color: green;*/
 	color: white;
-	font-family: 'Inconsolata', monospace;
+	/*font-family: 'Inconsolata', monospace;*/
+	font-family: "Bitter",serif;
 }
 
 
@@ -24,7 +25,6 @@ span {
 }
 
 .modal {
-	display: none;
 	position: fixed;
 	z-index:1;
 	left: 50px;
@@ -40,9 +40,22 @@ span {
 	background-color: rgb(60, 23, 66);
 	font-weight: bold;
 	font-size: 28px;
-	
+}
 
-	/*background-color: rgba(0,0,0,0.4);*/
+#quiz-modal {
+	display: none;
+}
+
+#success-modal {
+	display: none;
+}
+
+#success-modal p{
+	margin-left: 50px;
+	margin-top: 250px;
+	color: rgb(122, 218, 160);
+	font-size: 40px;
+	font-weight: 2px
 }
 
 .wrapper {
@@ -57,16 +70,18 @@ span {
 
 
 .modal p{
-	margin-left: 50px;
+	margin-left: 60px;
 	margin-top: 50px;
-	color: rgb(252, 248, 0);
-	font-size: 20px;
-	font-weight: 2px;
+	/*color: rgb(252, 248, 0);*/
+	color: rgb(122, 218, 160);
+	font-size: 30px;
+	font-weight: 0.1px;
+
 }
 
 
 input:focus {
-	outline:none;
+	outline:0;
 }
 
 .answer-button {
@@ -78,13 +93,16 @@ input:focus {
   padding: 30px;
   background: rgb(43, 21, 32);
   color: rgb(160, 144, 150);
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   opacity: 1;
-  font-size: 22px;
+  font-size: 30px;
   cursor: pointer;
-  outline: none;
+  outline: 0;
+  box-shadow: none;
   border-color: rgb(43, 21, 32);
   border-radius: 10px;
+/*  	 -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;*/
 }
 
 
