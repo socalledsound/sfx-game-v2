@@ -38,12 +38,14 @@ var Quiz = function(titles,answer, buttonColor) {
 		this.solved = this.checkAnswer(this.titles[index],this.answer);
 
 		if(this.solved) {
-			 this.setSolvedButtons(index);
+			 // this.setSolvedButtons(index);
+			 this.showSuccessModal();
 		}
 		else 
 		{
 			this.buttons[index].innerHTML = "nope.  guess again!";
 			this.buttons[index].style.backgroundColor = "rgb(60, 23, 66)";
+			this.buttons[index].style.color = "rgb(122, 218, 160)";
 			this.wrongAnswerSound.play();
 		}			
 
@@ -66,34 +68,49 @@ var Quiz = function(titles,answer, buttonColor) {
 		};
 	},
 
-	this.setSolvedButtons = function(correctIndex) {
+	this.showSuccessModal = function() {
+		quizModal.style.display = "none";	
+		successModal.style.display = "block";	
+		game.fullSolvedSound.fade(1.0,0.0,1000);
+		this.rightAnswerSound.play();
+		this.childrenYaySound.play();
+		setTimeout(this.cleanup.bind(this),2000);
+	},
 
-		for(var i=0;i<this.numButtons; i++) {
-			console.log(correctIndex == i);
-			if(i == correctIndex) {
 
-				this.buttons[i].innerHTML = "correct answer!";        			
-				this.buttons[i].style.backgroundColor = "rgb(60, 23, 66)";
-				this.buttons[i].style.fontSize = "30px";;
-				game.fullSolvedSound.fade(1.0,0.0,1000);
-				this.rightAnswerSound.play();
-				this.childrenYaySound.play();
-				// button.removeEventListener(touchEvent,function() { this.updateButton(answer,correctAnswer,index); }.bind(this));
-				setTimeout(this.cleanup.bind(this),3000);
+	// this.setSolvedButtons = function(correctIndex) {
+
+	// 	for(var i=0;i<this.numButtons; i++) {
+	// 		console.log(correctIndex == i);
+	// 		if(i == correctIndex) {
+
+	// 			this.buttons[i].innerHTML = "correct answer!";        			
+	// 			this.buttons[i].style.backgroundColor = "rgb(60, 23, 66)";
+	// 			// this.buttons[i].style.fontSize = "30px";;
+
+	// 			successModal.style.display = "none";	
+
+
+	// 			game.fullSolvedSound.fade(1.0,0.0,1000);
+	// 			this.rightAnswerSound.play();
+	// 			this.childrenYaySound.play();
+	// 			// button.removeEventListener(touchEvent,function() { this.updateButton(answer,correctAnswer,index); }.bind(this));
+	// 			setTimeout(this.cleanup.bind(this),3000);
 	        
-			}
-			else 
-			{
-				this.buttons[i].style.backgroundColor = "rgb(60, 23, 66)";
-				this.buttons[i].innerHTML = "";
+	// 		}
+	// 		else 
+	// 		{
+	// 			this.buttons[i].style.backgroundColor = "rgb(60, 23, 66)";
+	// 			this.buttons[i].innerHTML = "";
 			
-			};
-		};	
-	}
+	// 		};
+	// 	};	
+	// },
 
     this.cleanup  = function() {
 
     	for(var i=0;i<this.numButtons; i++) {
+    		this.buttons[i].style.color = "rgb(0, 0, 0)";
     		this.buttons[i].removeEventListener(touchEvent,this.buttonClicked);
     	};
     	setTimeout(game.cleanup,3000);
