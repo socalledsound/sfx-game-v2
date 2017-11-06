@@ -46,7 +46,7 @@ span {
 
 #about-page {
 	position: fixed;
-	left:50px;
+	left:70px;
 	width: 170px;
     height: 20px;	
 }
@@ -57,14 +57,14 @@ span {
 }*/
 #level {
 	position: fixed;
-	left:230px;
+	left:260px;
 	width: 240px;
     height: 20px;
 }
 
 #completion-percentage {
 	position: fixed;
-	left: 480px;
+	left: 560px;
 	width: 600px;
     height: 20px;
 }
