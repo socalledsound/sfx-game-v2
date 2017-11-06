@@ -207,6 +207,7 @@ var Game = function() {
 
 		this.percentDone = this.percentDone + 20;
 		percentDoneField.innerHTML= this.percentDone+"%";
+
 		// this.completedSounds.forEach((completedSound,i) => {
 		// 	var listItem = document.createElement("li");
 		// 	var listItemText = document.createTextNode(completedSound);
@@ -226,6 +227,9 @@ var Game = function() {
 		
 
 		this.progress = this.progress+1;
+		progressField.innerHTML = "you've found "+(this.progress)+" out of "+ this.numberOfSounds+" sounds -- keep going!"
+
+
 		if (this.progress === this.numberOfSounds) {
 			setTimeout(this.showLevelCompleteModal,3000);
 		}
@@ -252,6 +256,7 @@ var Game = function() {
 
 	this.showLevelCompleteModal = function() {
 		successModal.style.display = "none";
+
 		levelCompleteModal.style.display = "block";
 	}
 

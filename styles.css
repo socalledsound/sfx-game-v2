@@ -130,11 +130,19 @@ li{
 }
 
 #correct-answer {
-	margin-left: 80px;
+	margin-left: 40px;
 	margin-top: 100px;
 	color: rgb(122, 218, 160);
 	color:rgb(252, 248, 0);
 	font-size: 60px;
+	font-weight: 2px
+}
+
+#progress {
+	margin-left: 40px;
+	margin-top: 20px;
+	color: rgb(122, 218, 160);
+	font-size: 22px;
 	font-weight: 2px
 }
 
@@ -146,7 +154,7 @@ li{
 
 #correct-answer-list {
 	margin-left: 150px;
-	margin-top: 200px;
+	margin-top: 100px;
 	color: rgb(122, 218, 160);
 	color:rgb(252, 248, 0);
 	font-size: 40px;

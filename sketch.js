@@ -9,6 +9,7 @@ var levelCompleteModal = document.getElementById('level-complete-modal');
 
 var levelField = document.getElementById('level');
 var percentDoneField = document.getElementById('completion-percentage');
+var progressField = document.getElementById('progress');
 var completedSoundsList = document.getElementById('completed-sounds-list');
 
 // disable default touch behavior on touchscreens
