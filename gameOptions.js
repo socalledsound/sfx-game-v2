@@ -58,7 +58,7 @@ var gameOptions = {
 	width: 1000,
 	height: 1000,
 	xStart:80,
-	yStart:200,
+	yStart:220,
 	meridian:400,
 	boxHeight:80,
 	containerHeight:400,

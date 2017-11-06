@@ -39,6 +39,9 @@ var Game = function() {
 	 this.moveCounter = 0;
 	this.showRules = true;
 	this.hideView = false;
+	this.percentDone = 0;
+	this.level = 0;
+	
 
 
 
@@ -196,6 +199,7 @@ var Game = function() {
 
 	this.cleanup = function() {
 		successModal.style.display = "none";
+		this.level= this.level+1;
 		this.answeredQuiz = false; 
 		this.solvedTextArray=[];
 		this.paused=false;
@@ -208,6 +212,8 @@ var Game = function() {
 		this.containers.forEach(function(container){
 			container.containerSolved=false;
 		}, this)
+
+
 	}
 
 	this.cleanup = this.cleanup.bind(this);

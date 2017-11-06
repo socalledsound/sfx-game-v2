@@ -15,7 +15,7 @@ var Quiz = function(titles,answer, buttonColor) {
 
     
     this.init = function() {
-   console.log("in here");
+    console.log("in here");
     this.quizAppearSound.play();
  
 	    for(var i=0;i<this.numButtons; i++) {
@@ -71,6 +71,8 @@ var Quiz = function(titles,answer, buttonColor) {
 	this.showSuccessModal = function() {
 		quizModal.style.display = "none";	
 		successModal.style.display = "block";	
+		game.percentDone = game.percentDone + 20;
+		percentDoneField.innerHTML= "done : "+game.percentDone+"%";
 		game.fullSolvedSound.fade(1.0,0.0,1000);
 		this.rightAnswerSound.play();
 		this.childrenYaySound.play();

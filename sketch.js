@@ -5,7 +5,8 @@ var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 var quizModal = document.getElementById('quiz-modal');
 var successModal = document.getElementById('success-modal');
 var span = document.getElementsByClassName('close')[0];
-
+var levelField = document.getElementById('level');
+var percentDoneField = document.getElementById('completion-percentage');
 
 // disable default touch behavior on touchscreens
 document.addEventListener('touchstart', this.touchstart);
@@ -24,7 +25,7 @@ function touchmove(e) {
 
 //init game
 function setup() {
-	createCanvas(windowWidth,windowHeight);
+	createCanvas(750,850);
 	game = new Game();
 	game.initGame();
 	// game.showText(puzzleData.sounds[0].titles);

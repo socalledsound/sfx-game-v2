@@ -170,6 +170,16 @@ var Container = function(x,y,sounds,index) {
 		return val	
 	},
 
+	this.settleInGrid = function(val) {
+		if (val < 50) {val = 56};
+		if(val > 50 && val < 140 )  {val = 56};
+		if(val > 130 && val <220 ) 	{val = 138};
+		if(val > 220 && val <300 ) 	{val = 220};			
+		if(val > 300 && val <380 ) 	{val = 302};
+		if(val > 370 ) 	{val = 385};
+		return val	
+	},
+
 	this.unDragged = function() {
 		this.draggable = false;
 		this.cells.forEach(function(cell) {
