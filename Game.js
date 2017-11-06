@@ -227,7 +227,7 @@ var Game = function() {
 		
 
 		this.progress = this.progress+1;
-		progressField.innerHTML = "you've found "+(this.progress)+" out of "+ this.numberOfSounds+" sounds -- keep going!"
+		progressField.innerHTML = "you've found "+(this.progress)+" out of "+ this.numberOfSounds+" sounds:"
 
 
 		if (this.progress === this.numberOfSounds) {
@@ -238,6 +238,8 @@ var Game = function() {
 
 
 	this.cleanup = function() {
+
+
 			successModal.style.display = "none";
 			// this.nextLevelButton.removeEventListener(touchEvent, this.cleanup)
 			this.level= this.level+1;
