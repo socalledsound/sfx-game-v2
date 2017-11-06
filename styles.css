@@ -29,13 +29,15 @@ span {
 }
 
 .score-banner {
-		display: flex;
+/*		display: flex;
 	    flex-direction: row;
 	    flex-wrap:wrap;
-	    align-items: center;
+	    align-items: center;*/
 	    /*justify-content: center;*/
+	    display:block;
+	    position: fixed;
 	    padding:20px;
-	    margin-left:25px;
+/*	    margin-left:25px;*/
 	    list-style-type: none;
 	    text-decoration: none;
 	    font-size:22px;
@@ -43,6 +45,8 @@ span {
 }
 
 #about-page {
+	position: fixed;
+	left:50px;
 	width: 170px;
     height: 20px;	
 }
@@ -52,12 +56,16 @@ span {
     height: 20px;
 }*/
 #level {
-	width: 260px;
+	position: fixed;
+	left:230px;
+	width: 240px;
     height: 20px;
 }
 
-#percentage-complete {
-	width: 20px;
+#completion-percentage {
+	position: fixed;
+	left: 480px;
+	width: 600px;
     height: 20px;
 }
 
