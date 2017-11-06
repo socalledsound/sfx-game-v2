@@ -57,7 +57,7 @@ var gameOptions = {
 	numCells:5,
 	width: 1000,
 	height: 1000,
-	xStart:80,
+	xStart:30,
 	yStart:220,
 	meridian:400,
 	boxHeight:80,

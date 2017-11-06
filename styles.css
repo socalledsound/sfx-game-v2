@@ -35,37 +35,36 @@ span {
 	    align-items: center;
 	    /*justify-content: center;*/
 	    padding:20px;
-	    margin-left:75px;
+	    margin-left:25px;
 	    list-style-type: none;
 	    text-decoration: none;
+	    font-size:22px;
 		color: rgb(252, 248, 0);
 }
 
 #about-page {
-	width: 120px;
+	width: 170px;
     height: 20px;	
 }
 
-#puzzle-name {
+/*#puzzle-name {
 	width: 240px;
     height: 20px;
-}
+}*/
 #level {
-	width: 90px;
+	width: 260px;
     height: 20px;
 }
 
 #percentage-complete {
-	    width: 20px;
+	width: 20px;
     height: 20px;
-	margin-left:200px;
-	padding-left:200px;
 }
 
 .modal {
 	position: fixed;
 	z-index:1;
-	left: 50px;
+	left: 20px;
 	top:0px;
 	width:640px;
 	height:1000px;
