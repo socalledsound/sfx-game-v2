@@ -1,5 +1,6 @@
 var gameView;
 var gameOptions;
+var game;
 var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 var helpPage = document.getElementById('help-page');
@@ -54,7 +55,7 @@ function setup() {
 	createCanvas(750,850);
 	game = new Game();
 	game.initGame();
-	// game.showText(puzzleData.sounds[0].titles);
+
 }
 
 
