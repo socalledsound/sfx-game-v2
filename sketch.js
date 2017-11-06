@@ -2,7 +2,10 @@ var gameView;
 var gameOptions;
 var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
+var helpPage = document.getElementById('help-page');
+
 var introModal = document.getElementById('intro-modal-1');
+var helpModal = document.getElementById('help-modal');
 var quizModal = document.getElementById('quiz-modal');
 var successModal = document.getElementById('success-modal');
 var levelCompleteModal = document.getElementById('level-complete-modal');
@@ -24,10 +27,15 @@ document.addEventListener('touchstart', this.touchstart);
 document.addEventListener('touchmove', this.touchmove);
 
 beginButton.addEventListener(touchEvent, removeIntroModal);
+helpPage.addEventListener(touchEvent, showHelpModal);
 
 function removeIntroModal() {
 	beginBellSound.play();
 	introModal.style.display = "none";
+}
+
+function showHelpModal() {
+	helpModal.style.display = "none";
 }
 
 function touchstart(e) {

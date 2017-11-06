@@ -86,7 +86,7 @@ li{
 	position: fixed;
 	left:70px;
 	width: 170px;
-    height: 20px;	
+    height: 40px;	
 }
 
 /*#puzzle-name {
@@ -123,6 +123,10 @@ li{
 	background-color: rgb(120, 83, 126);
 	font-weight: bold;
 	font-size: 28px;
+}
+
+#help-modal {
+	display: none;
 }
 
 #quiz-modal {
@@ -198,7 +202,7 @@ input:focus {
 
 #begin-button {
 
-	  margin-top: 15px;
+	  margin-top: 50px;
   margin-left:180px;
   margin-right:50px;
   padding: 30px;
@@ -219,7 +223,7 @@ input:focus {
 
 #continue-button {
 
-	  margin-top: 15px;
+  margin-top: 50px;
   margin-left:180px;
   margin-right:50px;
   padding: 30px;
