@@ -2,9 +2,13 @@ var gameView;
 var gameOptions;
 var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
+var introModal = document.getElementById('intro-modal-1');
 var quizModal = document.getElementById('quiz-modal');
 var successModal = document.getElementById('success-modal');
 var levelCompleteModal = document.getElementById('level-complete-modal');
+
+
+var beginButton = document.getElementById('begin-button');
 
 
 var levelField = document.getElementById('level');
@@ -12,9 +16,19 @@ var percentDoneField = document.getElementById('completion-percentage');
 var progressField = document.getElementById('progress');
 var completedSoundsList = document.getElementById('completed-sounds-list');
 
+var beginBellSound = new Howl({ src: gameOptions.beginBellSoundPath });
+
+
 // disable default touch behavior on touchscreens
 document.addEventListener('touchstart', this.touchstart);
 document.addEventListener('touchmove', this.touchmove);
+
+beginButton.addEventListener(touchEvent, removeIntroModal);
+
+function removeIntroModal() {
+	beginBellSound.play();
+	introModal.style.display = "none";
+}
 
 function touchstart(e) {
     e.preventDefault()

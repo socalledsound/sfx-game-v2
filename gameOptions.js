@@ -29,6 +29,7 @@ var gameOptions = {
 	
 	// interface sounds
 
+	beginBellSoundPath: 'sounds/interfaceSounds/quizAppearSound.mp3',
 	mainClickSoundPath:'sounds/interfaceSounds/mainClick.mp3',
 	woodblock1SoundPath:'sounds/interfaceSounds/wood-block-1.mp3',
 	woodblock2SoundPath:'sounds/interfaceSounds/wood-block-2.mp3',
@@ -40,6 +41,7 @@ var gameOptions = {
 	wrongAnswerSoundPath: 'sounds/interfaceSounds/wrongAnswerSound.mp3',
 	childrenYaySoundPath: 'sounds/interfaceSounds/childrenYay.mp3',
 	quizAppearSoundPath: 'sounds/interfaceSounds/quizAppearSound.mp3',
+
 
 
 	// rules options
