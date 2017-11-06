@@ -185,6 +185,7 @@ var Level = function(puzzleData) {
 	this.resetLevel = function() {
 		levelCompleteModal.style.display = "none";	
 		this.resetBoard();
+		game.levelNumber = game.levelNumber+1;
 		game.newLevel();
 	}
 

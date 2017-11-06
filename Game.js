@@ -42,9 +42,9 @@ var Game = function() {
 	this.newLevel = function() {
 		 // game.cleanup();
 
-		this.levelNumber = this.levelNumber+1;
+		
 		this.puzzleData = this.puzzles[this.levelNumber];		
-		levelField.setInnerHTML = "level : "+this.levelNumber+" : "+this.levelName+" ";
+		levelField.innerHTML = "level : "+this.levelNumber+" : "+this.levelName+" ";
 		this.level = new Level(this.puzzleData);
 		this.level.initLevel();
 		levelCompleteModal.style.display = "none";

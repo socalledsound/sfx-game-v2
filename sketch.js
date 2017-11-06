@@ -22,7 +22,7 @@ var completedSoundsList = document.getElementById('completed-sounds-list');
 
 var beginBellSound = new Howl({ src: gameOptions.beginBellSoundPath });
 
-
+// levelField.innerHTML = "this is some text";
 // disable default touch behavior on touchscreens
 document.addEventListener('touchstart', this.touchstart);
 document.addEventListener('touchmove', this.touchmove);
