@@ -4,9 +4,12 @@ var touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 var quizModal = document.getElementById('quiz-modal');
 var successModal = document.getElementById('success-modal');
-var span = document.getElementsByClassName('close')[0];
+var levelCompleteModal = document.getElementById('level-complete-modal');
+
+
 var levelField = document.getElementById('level');
 var percentDoneField = document.getElementById('completion-percentage');
+var completedSoundsList = document.getElementById('completed-sounds-list');
 
 // disable default touch behavior on touchscreens
 document.addEventListener('touchstart', this.touchstart);

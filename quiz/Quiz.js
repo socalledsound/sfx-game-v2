@@ -71,8 +71,7 @@ var Quiz = function(titles,answer, buttonColor) {
 	this.showSuccessModal = function() {
 		quizModal.style.display = "none";	
 		successModal.style.display = "block";	
-		game.percentDone = game.percentDone + 20;
-		percentDoneField.innerHTML= "done : "+game.percentDone+"%";
+		game.updateSuccessModal();
 		game.fullSolvedSound.fade(1.0,0.0,1000);
 		this.rightAnswerSound.play();
 		this.childrenYaySound.play();

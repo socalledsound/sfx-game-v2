@@ -39,9 +39,13 @@ var Game = function() {
 	 this.moveCounter = 0;
 	this.showRules = true;
 	this.hideView = false;
+	this.progress = 0;
 	this.percentDone = 0;
 	this.level = 0;
-	
+	this.numberOfSounds = 5;
+	this.completedSounds = [];
+	this.solvedColors = [];
+
 
 
 
@@ -180,6 +184,7 @@ var Game = function() {
 			possTitles = solvedObject[0].titles;
 			corrTitle = solvedObject[0].trueTitle;
 			buttonColor = solvedObject[0].color;
+			this.solvedColors.push(solvedObject[0].color);
 
 			solvedObject=JSON.stringify(solvedObject[0].trueTitle);
 			this.solvedText=solvedObject;	
@@ -190,6 +195,7 @@ var Game = function() {
 			// this.quizAppearSound.play();
             this.paused = true;
             this.quiz = new Quiz(possTitles, corrTitle, buttonColor);
+            this.completedSounds.push(corrTitle);
             this.quiz.init();
             this.fullSolvedSound.play();
 		    quizModal.style.display = "block";
@@ -197,21 +203,57 @@ var Game = function() {
 			};
 	},
 
+	this.updateSuccessModal = function() {
+
+		this.percentDone = this.percentDone + 20;
+		percentDoneField.innerHTML= this.percentDone+"%";
+		// this.completedSounds.forEach((completedSound,i) => {
+		// 	var listItem = document.createElement("li");
+		// 	var listItemText = document.createTextNode(completedSound);
+		// 	var itemColor = this.solvedColors[i];
+		// 	listItem.style.color = "rgb("+ itemColor[0] + "," + itemColor[1] + ", " + itemColor[2] + ")";
+		// 	listItem.appendChild(listItemText);
+		// 	completedSoundsList.appendChild(listItem);
+		// })
+
+		
+		var newListItem = document.createElement("li");
+		var newListItemText = document.createTextNode(this.completedSounds[this.progress]);
+		var newItemColor = this.solvedColors[this.progress];
+		newListItem.style.color = "rgb("+ newItemColor[0] + "," + newItemColor[1] + ", " + newItemColor[2] + ")";
+		newListItem.appendChild(newListItemText);
+		completedSoundsList.appendChild(newListItem);
+		
+
+		this.progress = this.progress+1;
+		if (this.progress === this.numberOfSounds) {
+			setTimeout(this.showLevelCompleteModal,3000);
+		}
+
+	}
+
+
 	this.cleanup = function() {
+			successModal.style.display = "none";
+			// this.nextLevelButton.removeEventListener(touchEvent, this.cleanup)
+			this.level= this.level+1;
+			this.answeredQuiz = false; 
+			this.solvedTextArray=[];
+			this.paused=false;
+			this.disablePlayback=false;
+			this.solved = false;
+			this.solvedObject = "";
+			this.antiSolveSpell=false;
+			this.currentKey = "Z";
+			this.solvedArray=[0,0,0,0,0];
+			this.containers.forEach(function(container){
+				container.containerSolved=false;
+			}, this)
+
+	this.showLevelCompleteModal = function() {
 		successModal.style.display = "none";
-		this.level= this.level+1;
-		this.answeredQuiz = false; 
-		this.solvedTextArray=[];
-		this.paused=false;
-		this.disablePlayback=false;
-		this.solved = false;
-		this.solvedObject = "";
-		this.antiSolveSpell=false;
-		this.currentKey = "Z";
-		this.solvedArray=[0,0,0,0,0];
-		this.containers.forEach(function(container){
-			container.containerSolved=false;
-		}, this)
+		levelCompleteModal.style.display = "block";
+	}
 
 
 	}
@@ -220,3 +262,9 @@ var Game = function() {
 
 
 }
+
+
+			// this.nextLevelButton = document.createElement("button");
+			// // this.nextLevelButton.addEventListener(touchEvent, this.cleanup);
+			// this.nextLevelButton.innerHTML = "you completed the level";
+			// successModal.appendChild(this.nextLevelButton);
