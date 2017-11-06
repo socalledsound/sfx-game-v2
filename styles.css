@@ -209,6 +209,28 @@ input:focus {
   border-radius: 10px;
 }
 
+#continue-button {
+
+	  margin-top: 15px;
+  margin-left:180px;
+  margin-right:50px;
+  padding: 30px;
+  background: rgb(413, 121, 32);
+  color: rgb(160, 144, 150);
+  color: rgb(220, 14, 10);
+  color: rgb(0, 0, 0);
+  /*opacity: 1;*/
+  font-size: 40px;
+  font-style: bold;
+  /*font-weight: 20px;*/
+  cursor: pointer;
+  outline: 0;
+  box-shadow: none;
+  border-color: rgb(43, 21, 32);
+  border-radius: 10px;
+}
+
+
 
 
 .answer-button {

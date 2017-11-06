@@ -6,13 +6,14 @@ var Quiz = function(titles,answer, buttonColor) {
     this.answeredQuiz = false;	
 	this.button0,this.button1,this.button2,this.button3;
 	this.buttons = [];
+	this.continueGameButton = document.getElementById('continue-button');
     this.numButtons = 4;
     this.solved=false;
 	this.wrongAnswerSound = new Howl({ src:gameOptions.wrongAnswerSoundPath });    
 	this.rightAnswerSound = new Howl({ src: gameOptions.rightAnswerSoundPath });
 	this.childrenYaySound = new Howl({ src: gameOptions.childrenYaySoundPath });
 	this.quizAppearSound = new Howl({ src: gameOptions.quizAppearSoundPath });
-
+	
     
     this.init = function() {
     console.log("in here");
@@ -75,7 +76,8 @@ var Quiz = function(titles,answer, buttonColor) {
 		game.fullSolvedSound.fade(1.0,0.0,1000);
 		this.rightAnswerSound.play();
 		this.childrenYaySound.play();
-		setTimeout(this.cleanup.bind(this),2000);
+		this.continueGameButton.addEventListener(touchEvent, this.cleanup);
+		setTimeout(this.cleanup.bind(this),9000);
 	},
 
 
@@ -108,16 +110,23 @@ var Quiz = function(titles,answer, buttonColor) {
 	// 	};	
 	// },
 
-    this.cleanup  = function() {
+	this.removeContinueButtonListener = function() {
+		this.continueGameButton.removeEventListener(touchEvent, this.cleanup);
+	},
 
+    this.cleanup  = function() {
+		setTimeout(this.removeContinueButtonListener,1000);
+		// this.quizAppearSound.play();
+		game.cleanup();
     	for(var i=0;i<this.numButtons; i++) {
     		this.buttons[i].style.color = "rgb(0, 0, 0)";
     		this.buttons[i].removeEventListener(touchEvent,this.buttonClicked);
     	};
-    	setTimeout(game.cleanup,3000);
-
+    	 
     }
 
+	this.removeContinueButtonListener = this.removeContinueButtonListener.bind(this);
+	this.cleanup = this.cleanup.bind(this);
 
 
 //		this.buttons.forEach((button,index)=>{
