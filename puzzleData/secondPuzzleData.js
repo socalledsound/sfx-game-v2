@@ -1,81 +1,81 @@
 
 
 const secondPuzzleData = {
-	levelName: "level 2",
+	levelName: "animals",
 	sounds: [
 			{
-		trueTitle: "animal - monkey cartoon chatter",
+		trueTitle: "Alligator Snort And Long Exhale Wilshire Sfx.M",
 		titles: ["bullfrogs and other frogs, rowdy ambience","animal - monkey cartoon chatter", "sailors mumbling and grunting", "royal court ambience"],
-		fullSound: "sounds/monkeys/monkeys-full.mp3",
+		fullSound: "sounds/animals/alligator/alligator-full.mp3",
 		solutionKey:"A",
 		color: [66,112,250],
 		alreadySolved: false,
 		clips: [
-			{A1:"sounds/monkeys/monkeys1.mp3"},
-			{A2:"sounds/monkeys/monkeys2.mp3"},
-			{A3:"sounds/monkeys/monkeys3.mp3"},
-			{A4:"sounds/monkeys/monkeys4.mp3"},
-			{A5:"sounds/monkeys/monkeys5.mp3"}
+			{A1:"sounds/animals/alligator/alligator-1.mp3"},
+			{A2:"sounds/animals/alligator/alligator-1.mp3"},
+			{A3:"sounds/animals/alligator/alligator-1.mp3"},
+			{A4:"sounds/animals/alligator/alligator-1.mp3"},
+			{A5:"sounds/animals/alligator/alligator-1.mp3"}
 		]
 	},
 	{
-		trueTitle: "forest ambience -- multiple woodpeckers jam",
+		trueTitle: "Animal • Horse Vocals • Strong Snorts  Big Nostril Flutter Mean And Frequent. Sweeten A Pack Of Horses With It",
 		titles: ["forest ambience -- multiple woodpeckers jam","wooden box gears with squeaking", "screwing sap bores into forest trees", "door stop in forest giant hut"],
-		fullSound: "sounds/woodpeckers-short/woodpeckers-full-use.mp3",
+		fullSound: "sounds/animals/horse/horse-full.mp3",
 		solutionKey:"B",
 		color: [250,47,70],
 		alreadySolved: false,
 		clips: [
-			{B1:"sounds/woodpeckers-short/wp-sh-1.mp3"},
-			{B2:"sounds/woodpeckers-short/wp-sh-2.mp3"},
-			{B3:"sounds/woodpeckers-short/wp-sh-3.mp3"},
-			{B4:"sounds/woodpeckers-short/wp-sh-4.mp3"},
-			{B5:"sounds/woodpeckers-short/wp-sh-5.mp3"},
+			{B1:"sounds/animals/horse/horse-1.mp3"},
+			{B2:"sounds/animals/horse/horse-2.mp3"},
+			{B3:"sounds/animals/horse/horse-3.mp3"},
+			{B4:"sounds/animals/horse/horse-4.mp3"},
+			{B5:"sounds/animals/horse/horse-5.mp3"},
 		]
 	},
 	{
-		trueTitle: "tons of walnuts down drainpipe and into drawer",
+		trueTitle: "Animals • Sea Lions • Ext • Cu • Water Laps  Light Boat Rigging, Distant Offshore Oil Rig, Good",
 		titles: ["toys popping on a snare drum", "wind rattling a tin can sculpture", "gear ratchets spinning fast", "tons of walnuts down drainpipe and into drawer"],
-		fullSound: "sounds/walnuts/walnuts-full.mp3",
+		fullSound: "sounds/animals/sea-lions/sea-lions-full.mp3",
 		solutionKey:"C",
 		color: [250,160,66],
 		alreadySolved: false,
 		clips: [
-			{C1:"sounds/walnuts/walnuts1.mp3"},
-			{C2:"sounds/walnuts/walnuts2.mp3"},
-			{C3:"sounds/walnuts/walnuts3.mp3"},
-			{C4:"sounds/walnuts/walnuts4.mp3"},
-			{C5:"sounds/walnuts/walnuts5.mp3"},
+			{C1:"sounds/animals/animals/sea-lion/sea-lion-1.mp3"},
+			{C2:"sounds/animals/animals/sea-lion/sea-lion-2.mp3"},
+			{C3:"sounds/animals/animals/sea-lion/sea-lion-3.mp3"},
+			{C4:"sounds/animals/animals/sea-lion/sea-lion-4.mp3"},
+			{C5:"sounds/animals/animals/sea-lion/sea-lion-5.mp3"},
 		]
 	},
 	{
-		trueTitle: "giant hummingbird darting around - cartoon",
+		trueTitle: "Breathing Into Tube, Grunts, Growls, There Are Some Rally Wild•sounding Vocals Here, Gd For Apes Or Sampling, Live_",
 		titles: ["giant hummingbird darting around - cartoon", "fly stuck in ointment", "comic spaceship element", "mouth motorboat"],
-		fullSound: "sounds/hummingbird-short/hummingbird-new-full.mp3",
+		fullSound: "sounds/animals/strange-gorilla/strange-gorilla-full.mp3",
 		solutionKey:"D",
 		color: [250,90,250],
 		alreadySolved: false,
 		clips: [
-			{D1:"sounds/hummingbird-short/hb-short-1.mp3"},
-			{D2:"sounds/hummingbird-short/hb-short-2.mp3"},
-			{D3:"sounds/hummingbird-short/hb-short-3.mp3"},
-			{D4:"sounds/hummingbird-short/hb-short-4.mp3"},
-			{D5:"sounds/hummingbird-short/hb-short-5.mp3"},
+			{D1:"sounds/animals/strange-gorilla/strange-gorilla-1.mp3"},
+			{D2:"sounds/animals/strange-gorilla/strange-gorilla-2.mp3"},
+			{D3:"sounds/animals/strange-gorilla/strange-gorilla-3.mp3"},
+			{D4:"sounds/animals/strange-gorilla/strange-gorilla-4.mp3"},
+			{D5:"sounds/animals/strange-gorilla/strange-gorilla-5.mp3"},
 		]
 	},
 	{
-		trueTitle: "annoying high fairy vocalization",
+		trueTitle: "Cougar, Bobcat, Growls, Caution For Slight Level  Eq Change About Halfway Thru, Live ",
 		titles: ["comedy vibraslap wooble - cartoon","annoying high fairy vocalization", "coin wobble spin and stop", "saw blade wobble - medium"],
-		fullSound: "sounds/wobbly-shorter/wobbly-full.mp3",
+		fullSound: "sounds/animals/bobcat/bobcat-full.mp3",
 		solutionKey:"E",
 		color: [50,255,230],
 		alreadySolved: false,
 		clips: [
-			{E1:"sounds/wobbly-shorter/wobb-sh-1.mp3"},
-			{E2:"sounds/wobbly-shorter/wobb-sh-2.mp3"},
-			{E3:"sounds/wobbly-shorter/wobb-sh-3.mp3"},
-			{E4:"sounds/wobbly-shorter/wobb-sh-4.mp3"},
-			{E5:"sounds/wobbly-shorter/wobb-sh-5.mp3"},
+			{E1:"sounds/animals/bobcat/bobcat-1.mp3"},
+			{E2:"sounds/animals/bobcat/bobcat-2.mp3"},
+			{E3:"sounds/animals/bobcat/bobcat-3.mp3"},
+			{E4:"sounds/animals/bobcat/bobcat-4.mp3"},
+			{E5:"sounds/animals/bobcat/bobcat-5.mp3"},
 		]
 	}
 
@@ -87,29 +87,29 @@ const secondPuzzleData = {
 	// 	{
 	// 	trueTitle: "EERIE AMBIENCE LARGE, SCARY SPACE, SWEEPING TONES, ENERGY WAVE SWELL OR GIANT SPACESHIP BY, SCI FI",
 	// 	titles: ["this is the answe","this is not the answer", "this is also not the answer", "yet again, not the answer"],
-	// 	fullSound: "sounds/eerieSpace-short/eerieSpace-new-full.mp3",
+	// 	fullSound: "sounds/animals/eerieSpace-short/eerieSpace-new-full.mp3",
 	// 	solutionKey:"C",
 	// 	color: [250,160,66],
 	// 	alreadySolved: false,
 	// 	clips: [
-	// 		{C1:"sounds/eerieSpace-short/es-sh-1.mp3"},
-	// 		{C2:"sounds/eerieSpace-short/es-sh-2.mp3"},
-	// 		{C3:"sounds/eerieSpace-short/es-sh-3.mp3"},
-	// 		{C4:"sounds/eerieSpace-short/es-sh-4.mp3"},
-	// 		{C5:"sounds/eerieSpace-short/es-sh-5.mp3"},
+	// 		{C1:"sounds/animals/eerieSpace-short/es-sh-1.mp3"},
+	// 		{C2:"sounds/animals/eerieSpace-short/es-sh-2.mp3"},
+	// 		{C3:"sounds/animals/eerieSpace-short/es-sh-3.mp3"},
+	// 		{C4:"sounds/animals/eerieSpace-short/es-sh-4.mp3"},
+	// 		{C5:"sounds/animals/eerieSpace-short/es-sh-5.mp3"},
 	// 	]
 	// },
 	// 	{
 	// 	title: "ANNOYING HIGH FAIRY VOCALIZATION",
-	// 	fullSound: "sounds/highFairy/highFairy-full.mp3",
+	// 	fullSound: "sounds/animals/highFairy/highFairy-full.mp3",
 	// 	solutionKey:"E",
 	// 	alreadySolved: false,
 	// 	clips: [
-	// 		{E1:"sounds/highFairy/highFairy1.mp3"},
-	// 		{E2:"sounds/highFairy/highFairy2.mp3"},
-	// 		{E3:"sounds/highFairy/highFairy3.mp3"},
-	// 		{E4:"sounds/highFairy/highFairy4.mp3"},
-	// 		{E5:"sounds/highFairy/highFairy5.mp3"},
+	// 		{E1:"sounds/animals/highFairy/highFairy1.mp3"},
+	// 		{E2:"sounds/animals/highFairy/highFairy2.mp3"},
+	// 		{E3:"sounds/animals/highFairy/highFairy3.mp3"},
+	// 		{E4:"sounds/animals/highFairy/highFairy4.mp3"},
+	// 		{E5:"sounds/animals/highFairy/highFairy5.mp3"},
 	// 	]
 	// }
 
