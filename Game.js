@@ -43,7 +43,8 @@ var Game = function() {
 		 // game.cleanup();
 
 		
-		this.puzzleData = this.puzzles[this.levelNumber];		
+		this.puzzleData = this.puzzles[this.levelNumber];	
+		this.levelName = this.puzzleData.levelName;	
 		levelField.innerHTML = "level : "+this.levelNumber+" : "+this.levelName+" ";
 		this.level = new Level(this.puzzleData);
 		this.level.initLevel();

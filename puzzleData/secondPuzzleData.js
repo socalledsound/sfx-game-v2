@@ -12,10 +12,10 @@ const secondPuzzleData = {
 		alreadySolved: false,
 		clips: [
 			{A1:"sounds/animals/alligator/alligator-1.mp3"},
-			{A2:"sounds/animals/alligator/alligator-1.mp3"},
-			{A3:"sounds/animals/alligator/alligator-1.mp3"},
-			{A4:"sounds/animals/alligator/alligator-1.mp3"},
-			{A5:"sounds/animals/alligator/alligator-1.mp3"}
+			{A2:"sounds/animals/alligator/alligator-2.mp3"},
+			{A3:"sounds/animals/alligator/alligator-3.mp3"},
+			{A4:"sounds/animals/alligator/alligator-4.mp3"},
+			{A5:"sounds/animals/alligator/alligator-5.mp3"}
 		]
 	},
 	{
@@ -41,11 +41,11 @@ const secondPuzzleData = {
 		color: [250,160,66],
 		alreadySolved: false,
 		clips: [
-			{C1:"sounds/animals/animals/sea-lion/sea-lion-1.mp3"},
-			{C2:"sounds/animals/animals/sea-lion/sea-lion-2.mp3"},
-			{C3:"sounds/animals/animals/sea-lion/sea-lion-3.mp3"},
-			{C4:"sounds/animals/animals/sea-lion/sea-lion-4.mp3"},
-			{C5:"sounds/animals/animals/sea-lion/sea-lion-5.mp3"},
+			{C1:"sounds/animals/sea-lion/sea-lion-1.mp3"},
+			{C2:"sounds/animals/sea-lion/sea-lion-2.mp3"},
+			{C3:"sounds/animals/sea-lion/sea-lion-3.mp3"},
+			{C4:"sounds/animals/sea-lion/sea-lion-4.mp3"},
+			{C5:"sounds/animals/sea-lion/sea-lion-5.mp3"},
 		]
 	},
 	{
